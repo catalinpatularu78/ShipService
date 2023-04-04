@@ -25,7 +25,7 @@ public class Ship implements Serializable {
 	private String shipName;
 
 	@Column(name = "classId", nullable = false)
-	private int classId;
+	private Long classId;
 
 	@Column(name = "countryOfOrigin")
 	private String countryOfOrigin;
@@ -44,6 +44,10 @@ public class Ship implements Serializable {
 		return id;
 	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public Long getCargoRegNum() {
 		return cargoRegNum;
 	}
@@ -60,11 +64,11 @@ public class Ship implements Serializable {
 		this.shipName = shipName;
 	}
 
-	public int getClassId() {
+	public long getClassId() {
 		return classId;
 	}
 
-	public void setClassId(int classId) {
+	public void setClassId(Long classId) {
 		this.classId = classId;
 	}
 
